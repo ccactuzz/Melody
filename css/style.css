@@ -1,53 +1,209 @@
-*{
-    box-sizing: border-box;
+@font-face {
+  font-family: "Bebas Neue Cyrillic";
+  src: local("Bebas Neue Cyrillic"), local("BebasNeueCyrillic"),
+    url("../fonts/BebasNeueCyrillic.woff2") format("woff2"),
+    url("../fonts/BebasNeueCyrillic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-body{
-    font-family: 'Roboto', sans-serif;
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: local("Bebas Neue Light Regular"), local("BebasNeueLight"),
+    url("../fonts/BebasNeueLight.woff2") format("woff2"),
+    url("../fonts/BebasNeueLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
-.header{
-    background: #635854;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-bottom: 4px solid #3596F5;
+* {
+  box-sizing: border-box;
 }
-.navbar{
-    max-width: 1280px;
-    margin:  auto;
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.header {
+  background: #635854;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 4px solid #3596f5;
+}
+.navbar {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-menu {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  text-align: center;
+}
+.navbar-item {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.navbar-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.navbar-contacts {
+  text-align: right;
+}
+.navbar-text {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+.navbar-phone {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+}
+.main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 54px 0;
+  display: flex;
+}
+.main-info {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.home-image path {
+  opacity: 0;
+  cursor: pointer;
+}
+.home-image path:hover {
+  opacity: 1;
+}
+.counter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter-button {
+    cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+.counter-arrow-down {
+  transform: rotateX(180deg);
+}
+.main-title {
+  font-family: "Bebas Neue Cyrillic ";
+  margin: 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+
+  text-transform: uppercase;
+  color: #635854;
+}
+.counter {
+  color: #635854;
+  font-size: 90px;
+  font-family: "Bebas Neue Cyrillic";
+
+  font-weight: 100;
+  margin: 10px 0;
+}
+path.current-flor{
+  opacity: 1;
+}
+.button-primary {
+  background: #3596f5;
+  border-radius: 6px;
+  padding: 16px 36px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+.footer{
+    border-top: 4px solid #3596f5;
+    background: #D7D7D7;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer-navbar{
+
+   max-width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-group{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.navbar-menu{
-   padding: 0;
+
+.footer-menu{
+    padding: 0;
     list-style: none;
     display: flex;
     margin: 0;
     text-align: center;
 }
-.navbar-item{
-    margin-left: 40px;
-    margin-right: 40px;
+.footer-item {
+    margin-left: 10px;
+    margin-right: 10px;
 }
-.navbar-link{
-    text-decoration: none;
-    color: #fff;
+.footer-link{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
-    
-}
+    line-height: 19px;
 
-.navbar-contacts{
-   text-align: right;
+
+    text-decoration-line: underline;
+
+    color: #635854;
 }
-.navbar-text{
-    color: #fff;
-    font-size: 14px;
-    display: block;
-    margin-bottom: 4px;
+.footer-contacts{
+text-align: left;
+margin-left: 20px;
+margin-right: 30px;
 }
-.navbar-phone{
+.footer-phone{
     text-decoration: none;
-    color: white;
+
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
+    font-family: Roboto;
+    color: #635854;
 }
+.footer-text{
+    display: block;
+    margin-bottom: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #635854;
+}
+.icon-link{
+    text-decoration: none;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
