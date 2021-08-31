@@ -114,7 +114,7 @@ body {
   text-transform: uppercase;
   color: #635854;
 }
-.counter {
+.floor-counter {
   color: #635854;
   font-size: 90px;
   font-family: "Bebas Neue Cyrillic";
@@ -206,4 +206,111 @@ margin-right: 30px;
     margin-right: 5px;
     margin-left: 5px;
 }
+.modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s;
+}
+.flats path{
+  opacity: 0;
+  cursor: pointer;
+}
+.flats path:hover{
+  opacity: 1;
+}
 
+.is-open {
+  opacity: 1;
+  transform: scale(1);
+}
+.is-open > .modal-dialog{
+  transform: translateY(0);
+  opacity: 1;
+}
+.modal-dialog{
+  position: relative;
+ flex-grow: 1;
+  max-width: 1000px;
+  min-height: 565px;
+  background-color: #fff;
+  display: flex;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: transform 0.2s, opacity 0.2s;
+  transition-delay: 0.2s;
+}
+
+.modal-image{
+  text-align: center;
+  padding: 50px;
+  background-color: #EBEBEB;
+  width: 60%;
+}
+.modal-info{
+  width: 40%;
+  padding: 50px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+.modal-title{
+  font-family: 'Bebas Neue Cyrillic';
+font-style: normal;
+font-weight: 300;
+font-size: 32px;
+line-height: 29px;
+color: #635854;
+margin-top: 0;
+margin-bottom: 25px;
+}
+.flat-list{
+  list-style: none;
+
+  padding: 0;
+}
+.flat-link{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+color: #635854;
+  text-decoration: none;
+}
+.flat-link:hover{
+
+  color:  #3596F5;
+  text-decoration-line: underline;
+}
+.flat-item{
+  margin: 10px 0;
+}
+.modal-text{
+  font-family: 'Roboto';
+font-style: italic;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+
+color: #635854;
+}
+.modal-close-button{
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  right: 27px;
+  top: 38px;
+
+}
